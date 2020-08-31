@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    
+   
+    <title>National Parks API</title>
+  
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <section class="app-container">
+        <form id="search-form">
+          <h1>Search U.S. National Parks Campgrounds</h1>
+          <p>
+            Enter the code for the state you state visiting
+          </p>
+          <input
+            type="text"
+            id="state-code"
+            class="form-control"
+            placeholder="State Code"
+            maxlength="2"
+            required
+          />
+          <br />
+          <p>
+            Number of results:
+          </p>
+          <input
+            type="number"
+            id="number-input"
+            class="form"
+            value="10"
+            maxlength="2"
+            min="1"
+            max="20"
+          />
+          <br />
+          <input
+            id="submit-button"
+            type="submit"
+            value="Submit"
+          />
+        </form>
+      </section>
+    </header>
+    <div id="map" class="hidden" > </div>
+      <section id="results-list" class="hidden">
+      </section>
+    
+      <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzx7u7iMI4SuMmNPsj4WcwBclcqjmNNE0&callback=initMap">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

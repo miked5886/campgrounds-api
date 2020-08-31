@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  background: url(/images/img5.jpg) center/cover no-repeat;
+  height: 100vh;
+}
+
+body{
+  background-color: cornsilk;
+}
+
+h1{
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h2{
+  color: yellow;
+}
+
+h3{
+  font-size: 30px;
+  padding: 10px 10px;
+}
+
+h4{
+  font-size: 20px;
+  padding: 10px 10px;
+}
+
+p{
+  font-size: 24px;
+  padding: 10px 10px;
+}
+
+header p {
+  color: aliceblue;
+}
+
+
+form{
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.results{
+  margin: 10px;
+}
+
+.results-container{
+  display: flex;
+  
+  padding: 5px;
+  margin: 5px;
+}
+
+input{
+  padding:5px 15px;
+}
+
+button {
+  padding:5px 15px;
+}
+
+ul{
+  list-style: none;
+  }
+
+li{
+  font-size: 25px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.item {
+  flex: 1;
+  padding: 10px;
+}
+
+.item-double {
+  flex: 2;
+  padding: 10px;
+}
+
+.border {
+  border: 2px solid bisque;
+}
+
+.hidden {
+  display: none;
+}
+
+#map {
+  height: 400px;
+  width: 100% ;
+}
