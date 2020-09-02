@@ -4,23 +4,24 @@
   box-sizing: border-box;
 }
 
-body{
-  background-color: cornsilk;
+html{
+  scroll-behavior: smooth;
 }
+
 
 header{
-  background: url(./images/img5.jpg) center/cover no-repeat;
-  background-color: blue;
+  background: url('./images/header-bg.gif') center/cover no-repeat;
   height: 100vh;
+  max-width: 100vw;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
 }
 
-
-
 h1{
-  font-size: 50px;
+  font-size: 35px;
   color: white;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 10px;
+  text-shadow: 1px 1px 2px black;
 }
 
 h2{
@@ -29,7 +30,11 @@ h2{
 
 h3{
   font-size: 30px;
-  padding: 10px 10px;
+  text-align: center;
+  padding: 10px 20px;
+  background-color:rgb(189, 102, 184);
+  border-radius: 15px;
+  text-shadow: 1px 1px 2px black;
 }
 
 h4{
@@ -39,69 +44,216 @@ h4{
 
 p{
   font-size: 24px;
-  padding: 10px 10px;
-}
-
-header p {
-  color: aliceblue;
+  padding: 5px 10px;
+  color: whitesmoke;
 }
 
 
 form{
   font-size: 30px;
   text-align: center;
-  justify-content: center;
-  padding-top: 100px;
+  padding: 20% 5%;
 }
 
-.results{
-  margin: 10px;
+#results-list{
+  background: url('./images/results-bg.jpg') center/cover no-repeat;
+  color: whitesmoke;
+  padding: 10px;
 }
 
-.results-container{
-  display: flex;
-  
-  padding: 5px;
-  margin: 5px;
+label{
+  color: azure;
+  font-size: 30px;
+  text-shadow: 1px 1px 2px black;
 }
 
 input{
+  font-size: 28px;
+  color: whitesmoke;
   padding:5px 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px white solid;
+  width: 90px;
+  outline: none;
+  text-shadow: 1px 1px 2px black;
 }
 
-button {
-  padding:5px 15px;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+}
+
+::placeholder {
+  opacity: 0.8;
+  color: white;
+}
+
+#submit-button {
+  font-size: 25px;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border: 1px solid whitesmoke;
+  width: 120px;
+  border-radius: 15px;
+}
+
+#submit-button:hover{
+  background: whitesmoke;
+  color: black;
+  text-shadow: none;
+}
+
+#submit-button:active{
+  background: gainsboro;
+  color: black;
+  text-shadow: none;
+  box-shadow: 2px 2px;
+  margin: 23px 0 0 3px;
 }
 
 ul{
+  margin: 5px auto ;
+  padding: 5px;
   list-style: none;
+  background-color: blue;
+  border: lawngreen 3px solid;
+  border-radius: 20px;
+  width: 95%;
   }
 
 li{
   font-size: 25px;
-  margin-left: 10px;
-  padding: 10px;
+  padding: 5px 0;
+  list-style: none;
+ 
+ }
+
+ 
+li a { 
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px 5px ;
+  color:red; 
+  background-color: yellow;
+  border-radius: 15px;
 }
 
-.item {
-  flex: 1;
-  padding: 10px;
+li a:hover { color:yellow;
+  background-color: red;
+  border-radius: 15px;}
+
+li a:active { color:yellow;
+background-color: darkred; 
 }
 
-.item-double {
-  flex: 2;
-  padding: 10px;
-}
-
-.border {
-  border: 2px solid bisque;
-}
 
 .hidden {
   display: none;
 }
 
 #map {
-  height: 400px;
+  height: 500px;
   width: 100% ;
+  border: green 5px solid;
+}
+
+footer{
+  background-color: rgb(39, 35, 35);
+  border-top: 3px rgb(105, 105, 105) solid;
+  text-align: center;
+}
+
+footer p{
+  font-size: 18px;
+}
+
+.social{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0 25px;
+  border-bottom: 1px rgb(105, 105, 105) solid;
+  max-height: 80px;
+}
+
+.fa-facebook{
+  color: dodgerblue;
+  font-size: 35px;
+  
+}
+.fa-facebook:hover{
+  color: dodgerblue;
+  font-size: 37px;
+}
+
+.fa-twitter{
+  color: skyblue;
+  font-size: 35px;
+}
+.fa-twitter:hover{
+  color: skyblue;
+  font-size: 40px;
+}
+.fa-instagram{
+  color: violet;
+  font-size: 35px;
+}
+.fa-instagram:hover{
+  color: violet;
+  font-size: 40px;
+}
+.fa-youtube{
+  color: red;
+  font-size: 35px;
+}
+.fa-youtube:hover{
+  color: red;
+  font-size: 40px;
+}
+
+.fa-question-circle{
+  color: aliceblue;
+}
+.fa-question-circle:hover{
+  color: violet;
+}
+
+.display{
+  display: none;
+}
+
+
+#top {
+  text-align: center;
+  font-size: 30px;
+  padding: 0 10px;
+  border-radius: 15px;
+}
+
+#top a:hover {
+  color: black;
+}
+
+#top a{
+  padding: 1px 8px;
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: red;
+  border-radius: 15px;
+}
+@media (max-height:360px) {
+  form {
+    padding-top: 10%;
+  }
+}
+@media (min-width:800px) {
+  .display{
+    display: inline;
+  } 
+  h1{
+    font-size: 50px;
+  }
+  label{
+    font-size: 35px;
+  }
 }

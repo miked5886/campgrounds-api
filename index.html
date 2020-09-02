@@ -6,34 +6,36 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    
-   
     <title>National Parks API</title>
-  
+    <script src="https://kit.fontawesome.com/e3ee5fa59f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header>
+      <div class="background">
       <section class="app-container">
+        <h1 id="title">Search U.S. National Parks Campgrounds</h1>
         <form id="search-form">
-          <h1>Search U.S. National Parks Campgrounds</h1>
-          <p>
-            Enter the code for the state you state visiting
-          </p>
+          <label for="">
+            Enter State Code: 
+          </label>
+          <a target="_blank" href="https://abbreviations.yourdictionary.com/articles/state-abbrev.html"><i class="far fa-question-circle"></i></a>
           <input
+            autocomplete="off"
             type="text"
             id="state-code"
             class="form-control"
-            placeholder="State Code"
+            placeholder="CA"
             maxlength="2"
             required
           />
-          <br />
-          <p>
+          <br>
+          <label>
             Number of results:
-          </p>
+          </label>
           <input
+            autocomplete="off"
             type="number"
             id="number-input"
             class="form"
@@ -51,10 +53,22 @@
         </form>
       </section>
     </header>
+    <div id="container">
     <div id="map" class="hidden" > </div>
       <section id="results-list" class="hidden">
       </section>
-    
+    </div>
+   </div>
+    <footer>
+      <div class="social">
+      <p class="display">follow us:</p>
+      <a  target="_blank" href='https://www.facebook.com/nationalparkservice'><i class="fab fa-facebook"></i></a>
+      <a target="_blank" href="https://www.twitter.com/natlparkservice"><i class="fab fa-twitter"></i></a>
+      <a target="_blank" href="https://www.instagram.com/nationalparkservice"><i class="fab fa-instagram"></i></a>
+      <a target="_blank" href="https://www.youtube.com/nationalparkservice"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>All rights reserved &copy; Mike Duxbury 2020</p>
+    </footer>
       <script defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzx7u7iMI4SuMmNPsj4WcwBclcqjmNNE0&callback=initMap">
     </script>
