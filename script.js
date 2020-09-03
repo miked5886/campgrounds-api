@@ -60,8 +60,11 @@ function getParks(query, limit = 10) {
 function displayResults(responseJson) {
   console.log("displayResult function works");
   $("#results-list").empty();
+  $(".down").addClass("hidden");
   $("#results-list").addClass("hidden");
+  $(".no-results").removeClass("hidden");
   for (let i = 0; i < responseJson.data.length; i++) {
+    
     $("#results-list").append(`<br> <br><ul>
       <li><h3>${responseJson.data[i].name}</h3></li>
       <li><p>${responseJson.data[i].description}</p></li>
@@ -71,9 +74,10 @@ function displayResults(responseJson) {
       <li><a  target="_blank" href="https://nps.gov/${responseJson.data[i].parkCode}/planyourvisit">More info & Reservations</a></li>
       </ul><p id="top"><a href="#title"><i class="fas fa-angle-double-up"></i></a></p>
       `);
-      
+  $(".down").removeClass("hidden")  
+  $(".no-results").addClass("hidden");
   $("#map").removeClass("hidden")
-  $("#results-list").removeClass("hidden");
+  $("#results-list").removeClass("hidden")
 }
 }
 
