@@ -5,7 +5,7 @@ const natParkURL = "https://api.nps.gov/api/v1/campgrounds";
 $(document).ready(function() {
   watchSubmitForm();
 });
-const center = {lat:38.2017581,lng: -99.2785583}
+
 //Watch for form submit
 function watchSubmitForm() {
   console.log("watchSumbitForm works!");
@@ -64,8 +64,7 @@ function displayResults(responseJson) {
   $("#results-list").addClass("hidden");
   $(".no-results").removeClass("hidden");
   for (let i = 0; i < responseJson.data.length; i++) {
-    
-    $("#results-list").append(`<br> <br><ul>
+  $("#results-list").append(`<br> <br><ul>
       <li><h3>${responseJson.data[i].name}</h3></li>
       <li><p>${responseJson.data[i].description}</p></li>
     
