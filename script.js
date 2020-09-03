@@ -83,7 +83,7 @@ function displayResults(responseJson) {
 function initMap(){
   var options = {
     zoom: 4,
-    center
+    center: {lat:39.0119020, lng: -98.4842465}
   }
   var map = new google.maps.Map(document.getElementById('map'), options)
 } 
